@@ -1,0 +1,31 @@
+# Template — Squad Instructions (routing leader, dev)
+
+Paste ke field **Squad Instructions** di detail squad. English, ganti `[bracket]`.
+
+```
+Squad members and their lanes:
+- @[backend-dev]   — data model, API routes, server logic, migrations
+- @[frontend-dev]  — UI, components, pages, styling, client state
+- @[qa]            — running the app, testing flows, reviewing diffs, bug reports
+
+Routing rules:
+- Schema / API / data / server work          → @[backend-dev]
+- UI / component / page / styling work        → @[frontend-dev]
+- "test" / "verify" / "review" / QA           → @[qa]
+
+Full feature (spans lanes): sequence to avoid conflicts and missing dependencies:
+  1) @[backend-dev] builds the API/data first
+  2) @[frontend-dev] builds UI against that API
+  3) @[qa] verifies the end-to-end flow
+
+Defaults:
+- One delegation per task; don't double-assign the same file area in parallel.
+- If two members must touch the same files, sequence them, don't run in parallel.
+- Every delegated task must end with a passing build (`npm run build`) before it's done.
+- If requirements are unclear or out of scope, escalate to the human.
+```
+
+## Catatan
+
+- Nama member harus **persis** sama dgn nama agent di workspace.
+- Bentrok file = penyebab utama run dev paralel gagal → sequence kalau area kerja overlap.
