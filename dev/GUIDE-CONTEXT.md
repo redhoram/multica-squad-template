@@ -34,8 +34,8 @@ Sebelum bikin squad, siapkan **skeleton + CLAUDE.md**. Alasannya:
 
 1. **Validasi** — perlu Multica atau cukup Claude Code / `/ship`?
 2. **Scaffold** — siapkan skeleton stack + `CLAUDE.md` (stack, model data, konvensi, lane per agent). Build harus lulus.
-3. **Rancang squad** — 1 leader (tech lead/PM) + member spesialis (backend / frontend / qa). Mulai kecil.
-4. **Tulis instruksi agent** — pakai `agent-templates.md`. Tegaskan: **verify (build/test) sebelum selesai**.
+3. **Rancang squad** — 1 leader (tech lead/PM) + member spesialis. Ukuran lazim: backend / frontend / qa (minimal), atau + designer kalau ada UI signifikan. Squad 5 agent (PM + Designer + Backend + Frontend + QA) terbukti jalan di MiniHire.
+4. **Tulis instruksi agent** — pakai `agent-templates.md` (tersedia: PM, Designer, Backend, Frontend, QA). Tegaskan: **verify (build/test) sebelum selesai**.
 5. **Tulis squad instructions** — routing (`squad-instructions-template.md`).
 6. **Tulis issues** — 1 fitur/deliverable per issue, dengan acceptance criteria + file yang disentuh.
 
