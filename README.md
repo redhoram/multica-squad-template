@@ -1,59 +1,64 @@
-# _multica-template
+# multica-squad-template
 
-Context pack + template untuk menjalankan **squad agent di [Multica](https://multica.ai)**.
-Dua track: **dev** (coding) dan **non-dev** (riset/konten/analisis).
+> 🇮🇩 [Versi Bahasa Indonesia](./README.id.md)
 
-Ini **bukan** template kode (beda dari `_pipeline-template` / `_landing-template`). Isinya konteks
-biar Claude jadi guide-mu, plus template instruksi yang tinggal diisi saat case ditentukan.
+A context pack + template for running **AI agent squads on [Multica](https://multica.ai)**.
+Two tracks: **dev** (coding) and **non-dev** (research / content / analysis).
+
+This is **not** a code template (unlike `_pipeline-template` / `_landing-template`). It contains
+context files so Claude can guide you, plus ready-to-fill agent instruction templates.
 
 ## Mental model
 
 ```
-Claude Chat / Cowork   = GUIDE       → bantu mikir, scope, scaffold, nulis instruksi agent
-Multica                = WORKSPACE   → tempat agent beneran jalan & nyimpan hasil
+Claude Chat / Cowork   = GUIDE       → helps you think, scope, scaffold, write agent instructions
+Multica                = WORKSPACE   → where agents actually run and save results
 ```
 
-## Pilih track
+## Pick a track
 
 | | **dev/** | **non-dev/** |
 |---|---|---|
-| Untuk | Coding (CRUD, app, fitur) | Riset, konten, analisis, laporan |
-| Output | Kode di repo (atau PR) | Dokumen `.md` di `outputs/` |
-| Agent | backend / frontend / qa | researcher / writer / analyst |
-| Project folder | **Scaffold dulu** + CLAUDE.md | Folder knowledge-base + CLAUDE.md |
-| Nyambung ke | `_pipeline-template` (bisa nested) | — |
+| For | Coding (CRUD, app, feature) | Research, content, analysis, reports |
+| Output | Code in a repo (or PR) | Markdown docs in `outputs/` |
+| Agents | PM · Designer · Backend · Frontend · QA | Coordinator · Researcher · Writer · Analyst · Reviewer |
+| Project folder | **Scaffold first** + CLAUDE.md | Knowledge-base folder + CLAUDE.md |
+| Connects to | `_pipeline-template` (nestable) | — |
 
-## Struktur
+## Structure
 
 ```
-_multica-template/
-├── multica-reference.md     ← SHARED: primitive Multica yang akurat (dipakai dua track)
+multica-squad-template/
+├── multica-reference.md         ← SHARED: accurate Multica primitives (used by both tracks)
 ├── dev/
-│   ├── GUIDE-CONTEXT.md         ⭐ upload ini buat sesi coding
+│   ├── GUIDE-CONTEXT.md             ⭐ upload this for a coding session
 │   ├── setup-playbook.md
-│   ├── agent-templates.md
+│   ├── agent-templates.md           (PM · Designer · Backend · Frontend · QA)
 │   ├── squad-instructions-template.md
-│   └── project-template/        (CLAUDE.md + SCAFFOLD-NOTES.md)
+│   └── project-template/            (CLAUDE.md + SCAFFOLD-NOTES.md)
 └── non-dev/
-    ├── GUIDE-CONTEXT.md         ⭐ upload ini buat sesi non-coding
+    ├── GUIDE-CONTEXT.md             ⭐ upload this for a non-coding session
     ├── setup-playbook.md
-    ├── agent-templates.md
+    ├── agent-templates.md           (Coordinator · Researcher · Writer · Analyst · Reviewer)
     ├── squad-instructions-template.md
-    └── project-template/        (CLAUDE.md + outputs/)
+    └── project-template/            (CLAUDE.md + outputs/)
 ```
 
-## Cara pakai
+## How to use
 
-1. Buka room Claude baru → **upload `<track>/GUIDE-CONTEXT.md` + `multica-reference.md`**.
-2. Cerita case → Claude bantu putuskan: cocok Multica atau cukup chat / Claude Code langsung?
-3. Kalau cocok → copy `<track>/project-template/` → isi `CLAUDE.md` → ikuti `setup-playbook.md`.
-4. Instruksi agent & squad ambil dari template, ganti `[bracket]`.
+1. Open a new Claude session → **upload `<track>/GUIDE-CONTEXT.md` + `multica-reference.md`**.
+2. Describe your case → Claude helps decide: use Multica or just chat / Claude Code directly?
+3. If Multica fits → copy `<track>/project-template/` → fill in `CLAUDE.md` → follow `setup-playbook.md`.
+4. Paste agent & squad instructions from the templates, replace `[brackets]`.
 
-## Konvensi bahasa
+## Key design decisions
 
-- Prosa & penjelasan: **Bahasa Indonesia**
-- Blok copy-paste ke Multica (instruksi agent, CLAUDE.md): **English** (lebih reliable buat agent)
+- **Give agents human names** (e.g. Jaya, Citra) — git history reads like a real team.
+- **Co-author trailers** in every commit — makes the "built with AI squad" trail visible on GitHub.
+- **Reviewer/QA as quality gate** — no output is done until it passes review.
+- **Prose in Indonesian, agent instructions in English** — agents respond more reliably to English prompts.
 
-## Workspace-ku (Multica)
+## Works with
 
-`redhoram` · runtime cuma **Claude (lokal, 1 mesin)** · cloud runtime waitlist · mesin harus nyala saat agent kerja.
+- [`_pipeline-template`](https://github.com/redhoram/claude-pipeline-template) — 5-stage pipeline for complex features (nestable inside a Multica agent)
+- [`_landing-template`](https://github.com/redhoram/claude-landing-template) — visual loop for landing pages & simple apps
