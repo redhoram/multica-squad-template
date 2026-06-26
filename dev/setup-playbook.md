@@ -5,12 +5,12 @@ Dari fitur/project sampai agent ngoding. Ikuti urut. Beda utama dari non-dev: **
 ## 0. Validasi (di chat)
 
 - Perlu Multica, atau cukup Claude Code / `_pipeline-template` `/ship`? (lihat `GUIDE-CONTEXT.md`)
-- Kalau perlu Multica: pecah jadi lane — backend / frontend / qa.
+- Kalau perlu Multica: pecah jadi lane — backend / designer / frontend / qa.
 
 ## 1. Scaffold skeleton + CLAUDE.md  ⬅️ langkah kunci
 
 - Scaffold stack (mis. `npx create-next-app`, atau Vite). Pastikan `npm run build` lulus.
-- Drop `project-template/CLAUDE.md` → isi: stack, model data, konvensi, **lane per agent**, definition of done.
+- Drop `project-template/CLAUDE.md` → isi: stack, model data, konvensi, **lane per agent**, brand & design (kalau ada UI), **Agent Squad** (nama + co-author), definition of done.
 - Tambah skeleton minimum (types, helper db) biar agent fokus fitur — **bukan** implement penuh.
 - `git init` + commit pertama.
 - Verifikasi jalan (dev server / build) sebelum lanjut.
@@ -31,7 +31,9 @@ Per agent (mulai leader):
 - **Instructions**: paste dari `agent-templates.md`, sesuaikan stack. Tegaskan **verify sebelum selesai**.
 - Create. Ulang.
 
-> Mulai kecil: leader + 2 (backend, frontend). Tambah qa kalau perlu.
+> Susunan lengkap (terbukti di MiniHire): `pm-lead` + `designer` + `backend-dev` + `frontend-dev` + `qa`.
+> Boleh mulai kecil (leader + backend + frontend) lalu tambah designer & qa saat perlu.
+> Tips non-coder: kasih tiap agent nama orang (mis. Jaya, Citra) — git history jadi kebaca seperti tim beneran.
 
 ## 4. Buat Squad
 
@@ -42,7 +44,7 @@ Per agent (mulai leader):
 
 - **New Issue** per fitur. Description: konteks, langkah, **acceptance criteria**, file yang disentuh.
 - **Assignee = Squad**, set **Project**.
-- Untuk fitur penuh: urutkan (backend dulu → frontend → qa) biar nggak bentrok / asumsi kosong.
+- Untuk fitur penuh: urutkan (backend → designer → frontend → qa) biar nggak bentrok / asumsi kosong.
 
 ## 6. Monitor, review, verify
 
