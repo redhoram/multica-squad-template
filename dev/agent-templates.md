@@ -94,3 +94,4 @@ After a feature lands:
 - Pisahkan area kerja biar agent paralel nggak bentrok (backend file ≠ frontend file).
 - Peran yang sering dipakai → jadikan **Multica Skill** (`SKILL.md`).
 - Mau pipeline ketat? Instruksikan agent menjalankan `_pipeline-template` `/ship` untuk fiturnya.
+- Beri nama orang ke tiap agent (mis. Jaya, Sthira) — git history jadi kebaca seperti tim beneran.
