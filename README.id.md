@@ -25,6 +25,14 @@ Claude Chat / Cowork   = GUIDE       → bantu mikir, scope, scaffold, nulis ins
 Multica                = WORKSPACE   → tempat agent beneran jalan & nyimpan hasil
 ```
 
+### Prasyarat
+
+- Workspace [Multica](https://multica.ai) (tempat agent, squad, issue hidup).
+- **Daemon lokal Multica jalan di mesinmu** — agent eksekusi lewat Claude Code via daemon ini,
+  bukan runtime cloud Multica (masih waitlist-only pas ditulis).
+- **Mesinmu harus nyala** selama agent kerja, dan tiap run agent **makan kuota Claude-mu sendiri**
+  — banyak agent paralel = kuota cepat habis. Mulai dari squad kecil.
+
 ### Pilih track
 
 | | **dev/** | **non-dev/** |
@@ -67,6 +75,9 @@ multica-squad-template/
 - **Co-author trailer** di tiap commit — jejak "dibangun bareng squad AI" kelihatan di GitHub.
 - **Reviewer/QA sebagai quality gate** — output belum selesai sampai lolos review.
 - **Prosa Indonesia, instruksi agent English** — agent lebih reliable merespons prompt English.
+- **Gagal keras, bukan diam-diam** — agent posting bukti build/test sebelum klaim selesai,
+  bilang BLOCKED daripada pura-pura kelar, dan nggak pernah klaim cek visual/UI yang sebenarnya
+  nggak bisa dia lakukan headless.
 
 ### Cocok dipakai bersama
 

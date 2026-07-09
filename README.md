@@ -25,6 +25,14 @@ Claude Chat / Cowork   = GUIDE       → helps you think, scope, scaffold, write
 Multica                = WORKSPACE   → where agents actually run and save results
 ```
 
+### Prerequisites
+
+- A [Multica](https://multica.ai) workspace (agents, squads, issues live there).
+- The Multica **local daemon running on your machine** — agents execute via Claude Code
+  through this daemon, not a Multica cloud runtime (that's waitlist-only as of writing).
+- **Your machine has to stay on** while agents work, and every agent run **spends your own
+  Claude quota** — running several agents in parallel burns quota fast. Start with a small squad.
+
 ### Pick a track
 
 | | **dev/** | **non-dev/** |
@@ -67,6 +75,9 @@ multica-squad-template/
 - **Co-author trailers** in every commit — makes the "built with AI squad" trail visible on GitHub.
 - **Reviewer/QA as quality gate** — no output is done until it passes review.
 - **Prose in Indonesian, agent instructions in English** — agents respond more reliably to English prompts.
+- **Fail loud, not silent** — agents post build/test evidence before claiming done, declare
+  BLOCKED instead of faking a fix, and never claim a visual/UI check they can't actually
+  perform headless.
 
 ### Works with
 

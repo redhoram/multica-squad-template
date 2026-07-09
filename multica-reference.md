@@ -75,3 +75,8 @@ plaintext), **Custom Args** (CLI flags). Properti: **Concurrency** (default 6 ta
 - Agent jalan via **daemon lokal** di mesinku — bukan server Multica.
 - Cloud runtime: **waitlist-only** (belum tersedia).
 - Konsekuensi: mesin harus nyala; resource & kuota Claude dari mesinku.
+- Agent = **Claude Code CLI headless** — nggak ada browser/GUI. Verifikasi cuma bisa
+  build/test/curl; instruksi agent (lihat `agent-templates.md`) sengaja ditulis
+  headless-honest — jangan pernah suruh agent "klaim lihat UI".
+- **Failure mode: error 401 di semua agent** = token OAuth Claude Code expired di daemon.
+  Fix: buka `claude` di terminal → `/login` → restart daemon Multica.
