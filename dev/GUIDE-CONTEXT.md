@@ -9,6 +9,14 @@
 - **Multica** = workspace eksekusi. Agent (Claude Code) jalan via daemon lokal, kerja paralel di repo.
 - Workspace: **`redhoram`**. Runtime aktif: **Claude (Claude Code), lokal, 1 mesin**.
 
+## File template lain (PENTING — jangan mengarang)
+
+Langkah-langkah di bawah merujuk `agent-templates.md`, `squad-instructions-template.md`,
+dan `project-template/`. File-file itu TIDAK otomatis ada di sesi ini:
+- Sesi dengan akses folder (Claude Code / Cowork): baca langsung dari folder template.
+- Sesi chat upload-only: MINTA aku upload/paste file itu saat sampai di langkahnya.
+  Jangan tulis ulang template dari ingatan — versi di repo yang benar.
+
 ## Batas PENTING: kapan Multica, kapan nggak
 
 | Situasi | Pakai |

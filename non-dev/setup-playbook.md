@@ -13,6 +13,8 @@ Langkah dari case kosong sampai agent jalan. Ikuti urut.
 - Copy `project-template/` → rename, mis. `D:\_Git_\hr-ops`.
 - Isi `CLAUDE.md`: nama project, tujuan, peran, konvensi output.
 - Biarkan `outputs/` (tempat hasil) dan tambah `data/` kalau ada file sumber.
+- `git init` + commit pertama — definition of done di CLAUDE.md minta commit ber-trailer;
+  tanpa git init, agent nggak bisa commit.
 
 ## 2. Buat Project di Multica
 

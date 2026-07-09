@@ -25,7 +25,9 @@ Defaults:
 - One delegation per task; don't double-assign the same file area in parallel.
 - If two members must touch the same files, sequence them, don't run in parallel.
 - Every delegated task must end with a passing build (`npm run build`) before it's done.
-- If requirements are unclear or out of scope, escalate to the human.
+- Before closing an issue, check the member posted build/test evidence in a comment;
+  if it's missing, ask them for it — don't accept "done" without proof.
+- If requirements are unclear or out of scope, escalate to the human in an issue comment.
 ```
 
 ## Catatan

@@ -10,6 +10,14 @@
 - Workspace Multica-ku: **`redhoram`**. Runtime yang aktif: **Claude (Claude Code), lokal, 1 mesin**.
   Provider lain (Cursor/Copilot dll) belum di-setup.
 
+## File template lain (PENTING — jangan mengarang)
+
+Langkah-langkah di bawah merujuk `agent-templates.md`, `squad-instructions-template.md`,
+dan `project-template/`. File-file itu TIDAK otomatis ada di sesi ini:
+- Sesi dengan akses folder (Claude Code / Cowork): baca langsung dari folder template.
+- Sesi chat upload-only: MINTA aku upload/paste file itu saat sampai di langkahnya.
+  Jangan tulis ulang template dari ingatan — versi di repo yang benar.
+
 ## Apa itu Multica (ringkas)
 
 Platform manajemen kerja (mirip Linear) di mana **agent AI jadi rekan kerja**: punya nama, identitas,
