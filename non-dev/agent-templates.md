@@ -109,4 +109,8 @@ When a draft or deliverable is ready (researcher/writer/analyst posts to outputs
   Boleh skip kalau output hanya internal draft untuk diskusi.
 - Kalau satu peran sering dipakai lintas project → jadikan **Multica Skill** (`SKILL.md`) biar
   bisa di-attach ulang, bukan paste manual tiap kali.
+- **Skill pack siap pakai**: untuk peran penulis konten/komunikasi, attach `conversion-copy`
+  (formula headline, hierarki bukti jujur, aturan CTA — [claude-landing-template](https://github.com/redhoram/claude-landing-template)
+  `.claude/skills/`); untuk peran yang menilai pengalaman pengguna atas sebuah output,
+  `ux-research` dari repo yang sama. Sumber kebenaran tetap di repo asalnya.
 - Beri nama orang ke tiap agent (mis. Rani, Dimas) — output di repo jadi kebaca seperti tim beneran.

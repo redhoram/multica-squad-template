@@ -104,3 +104,19 @@ After a feature lands:
 - Peran yang sering dipakai → jadikan **Multica Skill** (`SKILL.md`).
 - Mau pipeline ketat? Instruksikan agent menjalankan `_pipeline-template` `/ship` untuk fiturnya.
 - Beri nama orang ke tiap agent (mis. Jaya, Sthira) — git history jadi kebaca seperti tim beneran.
+
+## Skill pack siap pakai (attach ke agent via Multica Skills)
+
+Nggak perlu nulis SKILL.md dari nol — dua repo template sudah membundel skill teruji
+(MIT/attribusi jelas). Copy file SKILL.md-nya ke Multica Skills, attach sesuai peran:
+
+| Agent | Skill | Ambil dari |
+|---|---|---|
+| `designer` | `premium-design` + `ux-research` | [claude-pipeline-template](https://github.com/redhoram/claude-pipeline-template) `.claude/skills/` |
+| `backend-dev` | `secure-coding` | claude-pipeline-template |
+| `frontend-dev` | `web-quality` | [claude-landing-template](https://github.com/redhoram/claude-landing-template) `.claude/skills/` |
+| `qa` | `testing-discipline` | claude-pipeline-template |
+| `pm-lead` | (opsional) `systematic-debugging` — buat menilai fix round | claude-pipeline-template |
+
+Sumber kebenaran tetap di repo asalnya — kalau skill di-update di sana, refresh salinan
+di Multica; jangan edit salinan lokal sampai beda sendiri.
